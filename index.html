@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Track campus dining hall availability and view today's menu.">
+<meta name="keywords" content="dining, campus, food, menu, university">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+html {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Dine and Dash</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Daily Menu</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="dhallimage1.jpg" alt="" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+  <h1 class="w3-xxlarge">Dine & Dash</h1>
+  </div>
+</header>
+
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+<!-- About Section -->
+<div class="w3-content" style="max-width:1100px" id="about">
+    <div class="w3-row w3-padding-64">
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <img src="foodsequel.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="900" height="750">
+      </div>
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">About Dine & Dash</h1><br>
+        <h5 class="w3-center">By Students, For Students</h5>
+        <p class="w3-large">
+          As college students ourselves, we know how stressful it can be trying to figure out where to eat on campus. 
+          Between busy schedules, long lines, and not-so-great menu options, finding a place to grab a quick bite can often feel like a challenge.
+        </p>
+        <p class="w3-large">
+          That’s why we created <b>Dine & Dash</b> – a tool designed specifically for students like us. With Dine & Dash, you can easily check 
+          how busy the dining halls are before you even leave your dorm, and see what’s on the menu for the day. We want to help you make quicker 
+          and better dining decisions so you can spend more time enjoying your meal and less time waiting in line.
+        </p>
+        <p class="w3-large w3-text-grey">
+          Whether you're looking for a place that isn't too crowded, or you want to know if today's menu has your favorite dish, we've got you covered. 
+          Our goal is to make campus dining easier and more convenient, so you can focus on the things that really matter – like classes, clubs, and hanging out with friends.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+  <!-- Dining Hall Tab Navigation -->
+  <div class="w3-center w3-padding-64" id="menu">
+    <h1>Choose a Dining Hall</h1>
+    <div class="w3-bar w3-border w3-light-grey">
+      <button class="w3-bar-item w3-button tablink" onclick="openHall('west')">West Hall</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openHall('east')">Warren Towers</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openHall('north')">Marciano</button>
+    </div>
+  </div>
+
+
+
+
+
+ <!-- West Hall Content (hidden by default) -->
+ <div id="west" class="w3-container hall-content" style="display:none">
+    <div class="w3-row w3-padding-64">
+      <!-- Menu Content -->
+      <div class="w3-col l6 w3-padding-large">
+        <h1 class="w3-center">West Hall Menu</h1>
+        <div id="menu-west">
+        </h1><br>
+        <h4>Burrito Station</h4>
+        <p class="w3-text-grey">Bowls served with grilled chicken, fresh shrimp, rice, and a variety of toppings to choose from.  </p><br>
+      
+        <h4>Grill Station</h4>
+        <p class="w3-text-grey">Grilled Hamburgers, turkey patties, beef hot dogs, and hand breaded chicken tenders</p><br>
+      
+        <h4>Pizza Station</h4>
+        <p class="w3-text-grey">Cheese pizza, pepporoni pizza, veggie pizza </p><br>
+      
+        <h4>Sandwich Station</h4>
+        <p class="w3-text-grey">Custom making sandwich station avaliable, roast beef is currently unavaliable</p><br>
+      
+        <h4>Mediterranean Grill</h4>
+        <p class="w3-text-grey">The speciality served today is chicken alfredo topped with parsley </p>    
+      </div>
+        </div>
+      </div>
+
+      <!-- Occupancy Status Content -->
+      <div class="w3-col l12 w3-padding-large">
+        <h1 class="w3-center">West Dining Hall Status</h1>
+        <h2 id="occupancy-west" class="w3-text-green">Low Traffic</h2>
+        <p id="details-west">Plenty of space available!</p>
+      </div>
+
+      <!-- Image Content (below status) -->
+      <div class="w3-col l12 w3-padding-large">
+        <img src="westdhall.jpg" class="w3-round w3-image w3-opacity-min" alt="West Dining Hall" style="width:120%; max-width: 700px;">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- East Hall Content (hidden by default) -->
+  <div id="east" class="w3-container hall-content" style="display:none">
+    <div class="w3-row w3-padding-64">
+        <!-- Menu Content -->
+        <div class="w3-col l6 w3-padding-large">
+          <h1 class="w3-center">Warren Towers Menu</h1>
+          <div id="menu-east">
+          </h1><br>
+          <h4>Grill Station</h4>
+          <p class="w3-text-grey">Crispy Chicken and Waffle Fries, Cluck Chicken Tenders, Coleslaw Dressing</p><br>
+        
+          <h4>Wraps N Bowls</h4>
+          <p class="w3-text-grey">Chicken Shawarma, Harissa, Hummus</p><br>
+        
+          <h4>Gluten Free</h4>
+          <p class="w3-text-grey">Jerk Chicken Thighs, Marshmallow Cereal Bar, Grilled Asparagus</p><br>
+           
+        </div>
+          </div>
+        </div>
+
+      <!-- Occupancy Status Content -->
+      <div class="w3-col l12 w3-padding-large">
+        <h1 class="w3-center">Warren Towers Status</h1>
+        <h2 id="occupancy-east" class="w3-text-green">Low Traffic</h2>
+        <p id="details-east">Plenty of space available!</p>
+      </div>
+
+      <!-- Image Content (below status) -->
+      <div class="w3-col l12 w3-padding-large">
+        <img src="warrentowersdhall.jpg" class="w3-round w3-image w3-opacity-min" alt="East Dining Hall" style="width:120%; max-width: 700px;">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- North Hall Content (hidden by default) -->
+  <div id="north" class="w3-container hall-content" style="display:none">
+    <div class="w3-row w3-padding-64">
+      <!-- Menu Content -->
+      <div class="w3-col l6 w3-padding-large">
+        <h1 class="w3-center">Marciano Menu</h1>
+        <div id="menu-north">
+            <h4>Grill Station</h4>
+            <p class="w3-text-grey">Griled Herbed Orange Chicken, Turkey Hot Dog, Angus Beef Patty, French Fries</p><br>
+
+            <h4>Saute</h4>
+            <p class="w3-text-grey">Herb Roasted Pork Loin, Kimchi, Asian Seared Tofu</p><br>
+          
+            <h4>Pizza Station</h4>
+            <p class="w3-text-grey">Cheese pizza, pepporoni pizza, veggie pizza </p><br>
+          
+            <h4>Home Zone</h4>
+            <p class="w3-text-grey">Country Pie, GF Beef Gravy, Caramlized Onions</p><br>
+          </div>
+      </div>
+
+      <!-- Occupancy Status Content -->
+      <div class="w3-col l12 w3-padding-large">
+        <h1 class="w3-center">Marciano Status</h1>
+        <h2 id="occupancy-north" class="w3-text-green">Low Traffic</h2>
+        <p id="details-north">Plenty of space available!</p>
+      </div>
+
+      <!-- Image Content (below status) -->
+      <div class="w3-col l12 w3-padding-large">
+        <img src="marciano.jpg" class="w3-round w3-image w3-opacity-min" alt="North Dining Hall" style="width:120%; max-width: 700px;">
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1>Contact</h1><br>
+    <p>Please feel free to contact us in regards to any issues you may be experiencing with the website. Or if you wish to simply leave a feedback and reviews, we would severly appreciate it! Please do not hesitate to reach out in regards to anything! </p>
+    <p class="w3-text-blue-grey w3-large"><b>1019 Commonwealth ave, Boston MA 02215</b></p>
+    <p>You can also contact us by phone 00553123-2323 or email izaher18@bu.edu or you can send us a message here:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name: " required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="number" placeholder="Feedback: " required name="Feedback: "></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+
+
+<!-- End page content -->
+</div>
+
+<!-- Link to the external JavaScript file -->
+<script src="app.js"></script> <!-- This will load the external JS file -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dine & Dash</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">  <!-- Link to external CSS file -->
+</head>
+<body>
+
+  <!-- Link to the external JavaScript file -->
+  <script src="app.js"></script> <!-- This loads the JavaScript from a separate file -->
+
+</body>
+</html>
+

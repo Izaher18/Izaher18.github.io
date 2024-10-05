@@ -1,0 +1,44 @@
+body {
+    font-family: "Times New Roman", Georgia, Serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+  }
+  
+  /* Add smooth scroll behavior globally */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* CSS for Occupancy Section */
+  #occupancy-status.w3-text-green {
+    color: #28a745;
+  }
+  
+  #occupancy-status.w3-text-yellow {
+    color: #ffc107;
+  }
+  
+  #occupancy-status.w3-text-red {
+    color: #dc3545;
+  }
+  
+  #occupancy-details {
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+
+  .hall-content {
+    margin: 0 auto;
+    max-width: 1000px; /* Adjust this to your preference */
+    text-align: left;
+  }
+  
+  .w3-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
